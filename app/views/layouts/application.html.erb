@@ -29,6 +29,7 @@
 				</ul>
 				<form class="navbar-form pull-right">
 					<% if signed_in? %>
+						<span class="welcome"><%= "Hey, #{current_user.username}!" %></span>
 						<%= link_to "Uploader", importer_path, class: "btn btn-warning" %>
 						<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn" %>
 					<% else %>

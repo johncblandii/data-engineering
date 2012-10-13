@@ -11,3 +11,18 @@
  *= require_self
  *= require_tree .
  */
+
+ #error_explanation{
+ 	background-color:#ececec;
+ 	padding: 0 10px 10px 10px;
+ 	border-radius: 5px;
+ 	margin-bottom:10px;
+
+ 	h2{
+ 		font-size:14px;
+ 	}
+ }
+ .welcome{
+ 	margin-top:5px;
+ 	margin-right:10px;
+ }

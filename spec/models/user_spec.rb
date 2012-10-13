@@ -7,7 +7,7 @@ describe User do
 		end
 
 		it 'should save a valid user' do
-			subject.email = "jb@example.com"
+			subject.username = "memyselfandi"
 			subject.password = "somepassword"
 			subject.save.should be_true
 		end
