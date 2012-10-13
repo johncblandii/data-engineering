@@ -13,4 +13,14 @@ describe Order do
 			subject.save.should be_true
 		end
 	end
+
+	context "#import tab delimited data" do
+		it "should parse a tab delimited file and save orders" do
+			data = File.read("#{Rails.root}/example_input.tab")
+			result = Order.import_from_text_file data, { headers: true, col_sep: "\t" }
+			result[:success].length.should eq(4)
+			result[:failed].length.should eq(0)
+			result[:revenue].should eq(95)
+		end
+	end
 end

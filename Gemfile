@@ -22,6 +22,10 @@ gem 'carrierwave'
 gem 'rspec-rails', group: :development
 
 group :test do
+	gem 'ruby_gntp'
+	gem 'guard-rspec'
+	gem 'guard-spork'
+	gem 'spork', "~> 1.0.0rc2"
 	gem 'capybara'
 	gem 'launchy'
 	gem 'database_cleaner'
