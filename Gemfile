@@ -13,11 +13,12 @@ end
 gem 'jquery-rails'
 
 gem 'devise'
+gem 'omniauth-openid'
 gem 'inherited_resources'
 gem 'carrierwave'
+gem 'cancan'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'rspec-rails', group: :development
 
@@ -27,6 +28,8 @@ group :test do
 	gem 'guard-spork'
 	gem 'spork', "~> 1.0.0rc2"
 	gem 'capybara'
+	gem 'cucumber'
+	gem 'cucumber-rails', :require => false
 	gem 'launchy'
 	gem 'database_cleaner'
 	gem 'factory_girl_rails'

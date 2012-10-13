@@ -11,7 +11,6 @@ class Order < ActiveRecord::Base
 
 	def self.import_from_text_file content, options={ headers:true }
 		#hashes to cache values
-		purchasers = {}
 		merchants = {}
 		products = {}
 		customers = {}

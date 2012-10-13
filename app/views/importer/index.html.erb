@@ -1,0 +1,9 @@
+<h1>Importer</h1>
+<p>To import data into our amazing relational database, select the file below and click <strong>Import</strong>.</p>
+
+<%= form_tag(importer_path, method: :post, :multipart => true) do %>
+	<p>
+  		<%= file_field_tag 'tab_file' %>
+  	</p>
+  	<button type="submit" class="btn btn-primary">Import!</button>
+<% end %>

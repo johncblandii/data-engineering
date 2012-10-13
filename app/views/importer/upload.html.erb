@@ -1,0 +1,17 @@
+<h1>Import Results</h1>
+<p>Your import is complete.</p>
+
+<table class="table table-striped">
+	<tr class="info">
+		<td>Saved Orders</td>
+		<td><%=@result[:success].length%></td>
+	</tr>
+	<tr class="error">
+		<td>Failed Orders</td>
+		<td><%=@result[:failed].length%></td>
+	</tr>
+	<tr class="success">
+		<td>Total Revenue</td>
+		<td><%=number_to_currency @result[:revenue]%></td>
+	</tr>
+</table>

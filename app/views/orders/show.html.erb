@@ -1,0 +1,51 @@
+<h1>Order Details</h1>
+
+<div class="row">
+	<div class="span4">
+		<strong><%= @order.merchant.name%></strong><br />
+		<%= @order.merchant.address%>
+	</div>
+	<div class="offset4 span4">
+		<table class="table table-condensed table-borderless">
+			<tr>
+				<td><strong>Order #</strong></td>
+				<td><%= @order.id %></td>
+			</tr>
+			<tr>
+				<td><strong>Order Date</strong></td>
+				<td><%= @order.created_at.to_s(:long) %></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="row">
+	<div class="span12">
+		<strong>Bill To</strong>:<br />
+		<%= @order.customer.name%>
+	</div>
+</div>
+<br />
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Qty</th>
+			<th>Price</th>
+			<th>Total</th>
+		</tr>
+	</thead>
+	<% @order.order_items.each do |item| %>
+	<tr>
+		<td><%=item.product.name%></td>
+		<td><%=item.quantity%></td>
+		<td><%=number_to_currency item.price%></td>
+		<td><%=number_to_currency(item.quantity*item.price)%></td>
+	</tr>
+	<% end %>
+	<tr>
+		<td colspan="2">&nbsp;</td>
+		<td><strong>Total</strong></td>
+		<td><%=number_to_currency @order.total %></td>
+	</tr>
+</table>
