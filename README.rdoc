@@ -1,0 +1,25 @@
+== Welcome to the LivingSocial "New Company We Just Purchased" Data File Importer, v1
+
+To utilize the application, make sure your prerequisites are installed.
+
+Steps to setup:
+1. Open Terminal to this folder
+2. run 'bundle install'
+3. run 'rake db:migrate && rake db:test:prepare'
+4. run 'bundle exec rspec' #all tests should pass; if they don't, there are ghosts in your machine!
+
+Once you're setup, it is time to start the server by running this in the terminal: 
+rails s
+
+Open your browser and visit:
+http://0.0.0.0:3000
+
+The rest is self-explanatory. If it isn't, I failed. ;-)
+
+== Prereq's
+
+1. Computer (Macs FTW)
+2. Internet (for cat video breaks between testing)
+3. Ruby (can use 'brew install rails')
+4. Rails (can use 'brew install rails')
+5. A browser (IE6 does not count; get a real browser: http://chrome.google.com)
